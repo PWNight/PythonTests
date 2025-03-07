@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .progress-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            margin: 20px 0;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #4CAF50;
+            transition: width 0.1s linear;
+        }
+        #status {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress"></div>
+    </div>
+    <div id="status">Ожидание...</div>
+    <script>
+        const progressBar = document.getElementById('progress')
+        const statusBar = document.getElementById('status')
+        const source = new EventSource("/progress")
+
+        source.onmessage = function (event){
+            const data = JSON.parse(event.data);
+            const progress = parseInt(data);
+            if (progress == 99){
+                progressBar.style.width = '100%'
+                statusBar.innerText = 'Выполнено:' + '100%'
+                source.close()
+            }else{
+                progressBar.style.width = progress + '%'
+                statusBar.innerText = 'Выполнено:' + progress + '%'
+            }
+        }
+    </script>
+</body>
+</html>
