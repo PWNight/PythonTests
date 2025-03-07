@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bdf79a0-22ff-4e67-a149-bb0df5f6d9b5" name="Changes" comment="+ tasks on asyncio" />
+    <list default="true" id="4bdf79a0-22ff-4e67-a149-bb0df5f6d9b5" name="Changes" comment="+ file ide">
+      <change afterPath="$PROJECT_DIR$/clear-directory/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,13 +79,22 @@
       <option name="project" value="LOCAL" />
       <updated>1741340163169</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="+ file ide">
+      <option name="closed" value="true" />
+      <created>1741340175659</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741340175659</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="+ progress bar imitation on flask" />
     <MESSAGE value="+ upload file on flask" />
     <MESSAGE value="+ tasks on asyncio" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ tasks on asyncio" />
+    <MESSAGE value="+ file ide" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ file ide" />
   </component>
 </project>
